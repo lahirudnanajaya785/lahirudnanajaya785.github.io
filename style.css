@@ -633,10 +633,11 @@ footer {
         gap: 0.5rem;
     }
 
-    /* Social icons always stay in a row — never stretch */
+    /* Social icons always stay in a row — centered */
     .hero-socials {
         flex-direction: row !important;
-        align-self: flex-start;
+        align-self: center;
+        justify-content: center;
     }
 
     .glass-card {
