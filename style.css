@@ -504,24 +504,117 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* simple mobile hide for now, could be expanded with JS */
+        display: none;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
+
+    /* Hero - smaller, tighter on mobile */
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 3rem;
+        align-items: flex-start;
     }
 
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Stack CTA buttons vertically and make them smaller */
+    .hero-cta {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .btn-primary {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .btn-social {
+        font-size: 1.2rem;
+    }
+
+    /* Sections */
+    .about-section, .projects-section, .skills-section, .contact-section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    /* About grid - single column */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projects grid - single column */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Skills container */
+    .skills-container {
+        gap: 1.5rem;
+    }
+
+    .tags {
+        gap: 0.6rem;
+    }
+
+    .tags span {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
     .footer-content {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+    }
+
+    /* Hide custom cursor on touch */
+    .cursor-glow, .cursor-dot {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
     }
 }
