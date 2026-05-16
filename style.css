@@ -325,6 +325,13 @@ h1, h2, h3, h4, .logo {
     transform: translateY(-3px);
 }
 
+.hero-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+}
+
 /* About Section */
 .about-section, .projects-section, .skills-section, .contact-section {
     padding: 6rem 0;
@@ -609,12 +616,14 @@ footer {
         padding: 0 1rem;
     }
 
+    /* Stack CTA area vertically */
     .hero-cta {
         flex-direction: column;
-        align-items: stretch; /* Stretch children to fill width */
+        align-items: stretch;
         gap: 0.75rem;
     }
 
+    /* Primary buttons go full width */
     .btn-primary {
         width: 100%;
         text-align: center;
@@ -624,21 +633,10 @@ footer {
         gap: 0.5rem;
     }
 
-    /* Keep social icons in a horizontal row */
-    .hero-cta .btn-social {
-        display: inline-flex;
-    }
-
-    /* Wrap social icons in a row using a pseudo-group trick */
-    .hero-cta {
-        flex-wrap: wrap;
-    }
-
-    /* Social icons sit side by side in a row */
-    .hero-cta .btn-social {
-        flex: 0 0 auto;
-        font-size: 1.4rem;
-        padding: 0.3rem;
+    /* Social icons always stay in a row — never stretch */
+    .hero-socials {
+        flex-direction: row !important;
+        align-self: flex-start;
     }
 
     .glass-card {
